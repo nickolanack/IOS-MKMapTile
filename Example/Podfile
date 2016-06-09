@@ -1,0 +1,6 @@
+use_frameworks!
+target 'IOS-MKMapTile_Tests' do
+  pod 'IOS-MKMapTile', :path => '../'
+  
+  
+end
