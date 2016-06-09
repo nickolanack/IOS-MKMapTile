@@ -1,0 +1,14 @@
+PODS:
+  - IOS-MKMapTile (0.1.0)
+
+DEPENDENCIES:
+  - IOS-MKMapTile (from `../`)
+
+EXTERNAL SOURCES:
+  IOS-MKMapTile:
+    :path: ../
+
+SPEC CHECKSUMS:
+  IOS-MKMapTile: 88279845bc21bf647fd8cfb8a9e0f31227f4d105
+
+COCOAPODS: 0.39.0
