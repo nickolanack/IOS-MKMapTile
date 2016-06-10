@@ -3,7 +3,7 @@
 
 @interface ImageTileOverlay : MKTileOverlay
 
-
+ @property bool cache;
 
 
 @end
