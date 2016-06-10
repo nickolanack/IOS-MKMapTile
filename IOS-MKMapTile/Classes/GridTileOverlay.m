@@ -8,7 +8,7 @@
 
 
 -(void)loadTileAtPath:(MKTileOverlayPath)path result:(void (^)(NSData *, NSError *))result {
-    //NSLog(@"Loading tile x/y/z: %ld/%ld/%ld",(long)path.x,(long)path.y,(long)path.z);
+    NSLog(@"Loading tile x/y/z: %ld/%ld/%ld",(long)path.x,(long)path.y,(long)path.z);
     
     CGSize sz = self.tileSize;
     CGRect rect = CGRectMake(0, 0, sz.width, sz.height);

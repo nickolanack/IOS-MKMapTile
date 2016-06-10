@@ -16,6 +16,10 @@
 		90DEA3F41D09E8020097134E /* GridTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DEA3F01D09E8020097134E /* GridTileOverlay.m */; };
 		90DEA3F51D09E8020097134E /* GridTileOverlayRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 90DEA3F11D09E8020097134E /* GridTileOverlayRenderer.h */; };
 		90DEA3F61D09E8020097134E /* GridTileOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DEA3F21D09E8020097134E /* GridTileOverlayRenderer.m */; };
+		90DEA3FB1D09FDBA0097134E /* ImageTileOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 90DEA3F71D09FDBA0097134E /* ImageTileOverlay.h */; };
+		90DEA3FC1D09FDBA0097134E /* ImageTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DEA3F81D09FDBA0097134E /* ImageTileOverlay.m */; };
+		90DEA3FD1D09FDBA0097134E /* ImageTileOverlayRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 90DEA3F91D09FDBA0097134E /* ImageTileOverlayRenderer.h */; };
+		90DEA3FE1D09FDBA0097134E /* ImageTileOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DEA3FA1D09FDBA0097134E /* ImageTileOverlayRenderer.m */; };
 		D83E04AF26803F9B58BB1C1A7611D42B /* Pods-IOS-MKMapTile_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2401A2F2AA2250D7CEA199283AECE5ED /* Pods-IOS-MKMapTile_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,10 @@
 		90DEA3F01D09E8020097134E /* GridTileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridTileOverlay.m; sourceTree = "<group>"; };
 		90DEA3F11D09E8020097134E /* GridTileOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridTileOverlayRenderer.h; sourceTree = "<group>"; };
 		90DEA3F21D09E8020097134E /* GridTileOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridTileOverlayRenderer.m; sourceTree = "<group>"; };
+		90DEA3F71D09FDBA0097134E /* ImageTileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTileOverlay.h; sourceTree = "<group>"; };
+		90DEA3F81D09FDBA0097134E /* ImageTileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTileOverlay.m; sourceTree = "<group>"; };
+		90DEA3F91D09FDBA0097134E /* ImageTileOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTileOverlayRenderer.h; sourceTree = "<group>"; };
+		90DEA3FA1D09FDBA0097134E /* ImageTileOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTileOverlayRenderer.m; sourceTree = "<group>"; };
 		975CB4C9BA1ED3A0C9734F72B0062529 /* Pods-IOS-MKMapTile_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IOS-MKMapTile_Tests-umbrella.h"; sourceTree = "<group>"; };
 		A64EEA03361F1DCBE22A34F1A6045AB3 /* IOS-MKMapTile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IOS-MKMapTile-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -106,6 +114,10 @@
 				90DEA3F01D09E8020097134E /* GridTileOverlay.m */,
 				90DEA3F11D09E8020097134E /* GridTileOverlayRenderer.h */,
 				90DEA3F21D09E8020097134E /* GridTileOverlayRenderer.m */,
+				90DEA3F71D09FDBA0097134E /* ImageTileOverlay.h */,
+				90DEA3F81D09FDBA0097134E /* ImageTileOverlay.m */,
+				90DEA3F91D09FDBA0097134E /* ImageTileOverlayRenderer.h */,
+				90DEA3FA1D09FDBA0097134E /* ImageTileOverlayRenderer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -199,6 +211,8 @@
 				1F01FF94CDE1A9EC1233E504CB2A012A /* IOS-MKMapTile-umbrella.h in Headers */,
 				90DEA3F51D09E8020097134E /* GridTileOverlayRenderer.h in Headers */,
 				90DEA3F31D09E8020097134E /* GridTileOverlay.h in Headers */,
+				90DEA3FD1D09FDBA0097134E /* ImageTileOverlayRenderer.h in Headers */,
+				90DEA3FB1D09FDBA0097134E /* ImageTileOverlay.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90DEA3FC1D09FDBA0097134E /* ImageTileOverlay.m in Sources */,
 				90DEA3F41D09E8020097134E /* GridTileOverlay.m in Sources */,
 				90DEA3F61D09E8020097134E /* GridTileOverlayRenderer.m in Sources */,
+				90DEA3FE1D09FDBA0097134E /* ImageTileOverlayRenderer.m in Sources */,
 				0A0B2D473681828AEFA047B78ADE0034 /* IOS-MKMapTile-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
