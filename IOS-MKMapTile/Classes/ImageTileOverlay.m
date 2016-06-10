@@ -12,7 +12,7 @@
 
 -(void)loadTileAtPath:(MKTileOverlayPath)path result:(void (^)(NSData *, NSError *))result {
     
-    
+    self.cache=true;
     
     
     if(self.cache&&[self cachedTileExistsForPath:path]){
@@ -24,7 +24,7 @@
     [super loadTileAtPath:path result:^(NSData *data, NSError *err) {
         
         if((!err)&&self.cache){
-            //[self cacheTile:data ForPath:path];
+            [self cacheTile:data ForPath:path];
         }
         
         NSLog(@"%i, %i %i", path.x, path.y, path.z);
@@ -40,8 +40,8 @@
 -(bool)cachedTileExistsForPath:(MKTileOverlayPath)path{
     
     NSString *file=[self fileNameForPath:path];
-    return [[NSFileManager defaultManager] fileExistsAtPath:file];
-    
+    bool exists= [[NSFileManager defaultManager] fileExistsAtPath:file];
+    return exists;
 }
 
 -(NSData *)getCachedTileForPath:(MKTileOverlayPath)path{
@@ -49,19 +49,28 @@
     return [[NSData alloc] initWithContentsOfFile:file];
 }
 
--(NSData *)cacheTile:(NSData *)tile ForPath:(MKTileOverlayPath)path{
+-(bool)cacheTile:(NSData *)tile ForPath:(MKTileOverlayPath)path{
     NSString *file=[self fileNameForPath:path];
     [[NSFileManager defaultManager] createFileAtPath:file contents:tile attributes:nil];
-    
+    return true;
 }
 
 
 -(NSString *)fileNameForPath:(MKTileOverlayPath)path{
-    NSString *folder = [[[[NSHomeDirectory() stringByAppendingPathComponent:@"tiles"] stringByAppendingPathComponent:[self uniqueId]] stringByAppendingString:[NSString stringWithFormat:@"%i", path.z]] stringByAppendingString:[NSString stringWithFormat:@"%i", path.x]];
+    
+    if(!_tilePath){
+        _tilePath= [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[self uniqueId]];
+    }
+    
+     NSString *folder=[[_tilePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%i", path.z]] stringByAppendingPathComponent:[NSString stringWithFormat:@"%i", path.x]];
     
     
     
     bool dir;
+    
+    NSString *file= [folder stringByAppendingPathComponent:[NSString stringWithFormat:@"%i.png", path.y]];
+    NSLog(file);
+    
     if(![[NSFileManager defaultManager] fileExistsAtPath:folder]){
         NSError *err;
         [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:true attributes:nil error:&err];
@@ -71,9 +80,8 @@
         
     }
     
-    NSString *file= [folder stringByAppendingPathComponent:[NSString stringWithFormat:@"%i.png", path.y]];
-    NSLog(file);
-    
+  
+    return file;
   
     
 }
