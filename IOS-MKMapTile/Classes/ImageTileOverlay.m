@@ -12,11 +12,15 @@
 
 -(void)loadTileAtPath:(MKTileOverlayPath)path result:(void (^)(NSData *, NSError *))result {
     
-    self.cache=true;
+    //self.cache=true;
     
     
     if(self.cache&&[self cachedTileExistsForPath:path]){
-        result([self getCachedTileForPath:path], nil);
+        NSData *data=[self getCachedTileForPath:path];
+        if(data.length==0){
+            NSLog(@"0");
+        }
+        result(data, nil);
         return;
     }
     
@@ -25,6 +29,10 @@
         
         if((!err)&&self.cache){
             [self cacheTile:data ForPath:path];
+        }
+        
+        if(err){
+            NSLog(@"err");
         }
         
         NSLog(@"%i, %i %i", path.x, path.y, path.z);
@@ -69,7 +77,7 @@
     bool dir;
     
     NSString *file= [folder stringByAppendingPathComponent:[NSString stringWithFormat:@"%i.png", path.y]];
-    NSLog(file);
+    //NSLog(file);
     
     if(![[NSFileManager defaultManager] fileExistsAtPath:folder]){
         NSError *err;
