@@ -1,9 +1,9 @@
 {
   "name": "IOS-MKMapTile",
   "version": "0.1.0",
-  "summary": "A short description of IOS-MKMapTile.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/IOS-MKMapTile",
+  "summary": "Map Tiles",
+  "description": "A library to render tiles and offline tiles",
+  "homepage": "https://github.com/nickolanack/IOS-MKMapTile",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "nickolanack": "nickblackwell82@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/IOS-MKMapTile.git",
+    "git": "https://github.com/nickolanack/IOS-MKMapTile.git",
     "tag": "0.1.0"
   },
   "platforms": {
